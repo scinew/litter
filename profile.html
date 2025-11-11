@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Profile - App" />
+  <title>Profile - App</title>
+
+  <!-- Tailwind Configuration -->
+  <script src="./assets/js/tailwind-config.js"></script>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Global Styles -->
+  <link rel="stylesheet" href="./assets/css/global.css" />
+
+  <!-- Preload fonts -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" />
+</head>
+
+<body class="dark">
+  <!-- Layout Header & Navigation -->
+  <header class="sticky top-0 z-50 bg-neutral-950/95 backdrop-blur-sm border-b border-neutral-800 fade-slide-in">
+    <div class="container mx-auto px-4 py-4">
+      <div class="flex items-center justify-between">
+        <!-- Brand -->
+        <div class="flex items-center gap-2">
+          <div class="w-8 h-8 bg-gradient-to-br from-blue-500 to-blue-600 rounded-bubble flex items-center justify-center">
+            <span class="text-white font-bold text-sm">A</span>
+          </div>
+          <span class="text-xl font-bold text-neutral-100 hidden sm:inline">App</span>
+        </div>
+
+        <!-- Primary Navigation -->
+        <nav class="flex items-center gap-1 md:gap-4">
+          <a href="./index.html" class="nav-item px-3 py-2 rounded-pill text-neutral-400 hover:text-neutral-200 transition-colors duration-200 text-sm md:text-base">
+            Home
+          </a>
+          <a href="./alerts.html" class="nav-item px-3 py-2 rounded-pill text-neutral-400 hover:text-neutral-200 transition-colors duration-200 text-sm md:text-base">
+            Alerts
+          </a>
+          <a href="./profile.html" class="nav-item px-3 py-2 rounded-pill text-neutral-200 font-semibold transition-colors duration-200 text-sm md:text-base">
+            Profile
+          </a>
+        </nav>
+
+        <!-- Action Buttons -->
+        <div class="flex items-center gap-2">
+          <button class="px-3 py-2 md:px-4 md:py-2 bg-neutral-800 hover:bg-neutral-700 text-neutral-200 rounded-pill text-sm transition-colors duration-200">
+            Settings
+          </button>
+          <button class="px-3 py-2 md:px-4 md:py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-pill text-sm font-medium transition-colors duration-200">
+            Sign In
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Layout Grid -->
+  <div class="flex flex-col md:grid md:grid-cols-[240px_1fr_240px] md:gap-4 min-h-[calc(100vh-73px)] bg-neutral-950">
+    <!-- Left Rail Sidebar -->
+    <aside class="hidden md:block bg-neutral-900 border-r border-neutral-800 p-4 overflow-y-auto">
+      <div class="space-y-4 fade-slide-in">
+        <h3 class="text-xs font-semibold text-neutral-400 uppercase tracking-wider">Menu</h3>
+        <div class="space-y-2">
+          <div class="bubble-surface p-3 text-neutral-300 text-sm cursor-pointer bg-neutral-800 border-neutral-600">
+            Profile
+          </div>
+          <div class="bubble-surface p-3 text-neutral-300 text-sm cursor-pointer hover:bg-neutral-800">
+            Settings
+          </div>
+          <div class="bubble-surface p-3 text-neutral-300 text-sm cursor-pointer hover:bg-neutral-800">
+            Preferences
+          </div>
+          <div class="bubble-surface p-3 text-neutral-300 text-sm cursor-pointer hover:bg-neutral-800">
+            Security
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="flex-1 p-4 md:p-6 overflow-y-auto">
+      <div class="fade-slide-in space-y-8 max-w-4xl">
+        <!-- Profile Header -->
+        <div class="bubble-surface p-8 md:p-12">
+          <div class="flex flex-col md:flex-row items-start md:items-center gap-6">
+            <!-- Avatar -->
+            <div class="w-24 h-24 md:w-32 md:h-32 bg-gradient-to-br from-blue-500 to-purple-600 rounded-bubble flex items-center justify-center flex-shrink-0">
+              <span class="text-5xl md:text-6xl">👤</span>
+            </div>
+
+            <!-- Profile Info -->
+            <div class="flex-1">
+              <h1 class="text-3xl md:text-4xl font-bold text-neutral-100 mb-2">John Doe</h1>
+              <p class="text-neutral-400 mb-4">Professional • Designer & Developer</p>
+              <div class="flex gap-2">
+                <button class="px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-pill text-sm font-medium transition-colors">
+                  Edit Profile
+                </button>
+                <button class="px-4 py-2 bg-neutral-800 hover:bg-neutral-700 text-neutral-200 rounded-pill text-sm transition-colors">
+                  Share
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Profile Sections -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- About Section -->
+          <div class="bubble-surface p-6" data-animate>
+            <h2 class="text-xl font-semibold text-neutral-100 mb-4">About</h2>
+            <p class="text-neutral-300 leading-relaxed mb-4">
+              Passionate about creating beautiful and functional user experiences. Specialized in modern web technologies
+              and design systems.
+            </p>
+            <div class="space-y-2">
+              <p class="text-sm text-neutral-400"><span class="font-semibold text-neutral-300">Location:</span> San Francisco, CA</p>
+              <p class="text-sm text-neutral-400"><span class="font-semibold text-neutral-300">Member Since:</span> January 2020</p>
+              <p class="text-sm text-neutral-400"><span class="font-semibold text-neutral-300">Status:</span> <span class="text-green-400">Active</span></p>
+            </div>
+          </div>
+
+          <!-- Stats Section -->
+          <div class="bubble-surface p-6" data-animate>
+            <h2 class="text-xl font-semibold text-neutral-100 mb-4">Stats</h2>
+            <div class="space-y-3">
+              <div class="flex justify-between items-center">
+                <span class="text-neutral-400">Projects Completed</span>
+                <span class="font-semibold text-neutral-100">32</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-neutral-400">Followers</span>
+                <span class="font-semibold text-neutral-100">1,234</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-neutral-400">Following</span>
+                <span class="font-semibold text-neutral-100">456</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-neutral-400">Contributions</span>
+                <span class="font-semibold text-neutral-100">2,891</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skills Section -->
+        <div class="bubble-surface p-6" data-animate>
+          <h2 class="text-xl font-semibold text-neutral-100 mb-4">Skills</h2>
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
+            <span class="px-3 py-2 bg-blue-500/20 text-blue-400 rounded-pill text-sm">React</span>
+            <span class="px-3 py-2 bg-blue-500/20 text-blue-400 rounded-pill text-sm">Tailwind CSS</span>
+            <span class="px-3 py-2 bg-purple-500/20 text-purple-400 rounded-pill text-sm">JavaScript</span>
+            <span class="px-3 py-2 bg-purple-500/20 text-purple-400 rounded-pill text-sm">TypeScript</span>
+            <span class="px-3 py-2 bg-green-500/20 text-green-400 rounded-pill text-sm">UI Design</span>
+            <span class="px-3 py-2 bg-green-500/20 text-green-400 rounded-pill text-sm">UX Design</span>
+          </div>
+        </div>
+
+        <!-- Recent Activity Section -->
+        <div class="bubble-surface p-6" data-animate>
+          <h2 class="text-xl font-semibold text-neutral-100 mb-4">Recent Activity</h2>
+          <div class="space-y-4">
+            <div class="pb-4 border-b border-neutral-700 last:border-b-0">
+              <p class="text-neutral-300 font-medium">Updated profile information</p>
+              <p class="text-sm text-neutral-500">2 days ago</p>
+            </div>
+            <div class="pb-4 border-b border-neutral-700 last:border-b-0">
+              <p class="text-neutral-300 font-medium">Completed project: Design System v2</p>
+              <p class="text-sm text-neutral-500">1 week ago</p>
+            </div>
+            <div class="pb-4 border-b border-neutral-700 last:border-b-0">
+              <p class="text-neutral-300 font-medium">Added new skill: Tailwind CSS</p>
+              <p class="text-sm text-neutral-500">2 weeks ago</p>
+            </div>
+            <div class="pb-4 border-b border-neutral-700 last:border-b-0">
+              <p class="text-neutral-300 font-medium">Changed profile picture</p>
+              <p class="text-sm text-neutral-500">3 weeks ago</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Right Rail Sidebar -->
+    <aside class="hidden lg:block bg-neutral-900 border-l border-neutral-800 p-4 overflow-y-auto">
+      <div class="space-y-4 fade-slide-in">
+        <h3 class="text-xs font-semibold text-neutral-400 uppercase tracking-wider">Account</h3>
+        <div class="bubble-surface p-4 space-y-3">
+          <div>
+            <p class="text-xs text-neutral-400 uppercase tracking-wider">Email</p>
+            <p class="text-sm text-neutral-300 truncate">john@example.com</p>
+          </div>
+          <div>
+            <p class="text-xs text-neutral-400 uppercase tracking-wider">Plan</p>
+            <p class="text-sm text-neutral-300">Premium</p>
+          </div>
+          <div class="pt-3 border-t border-neutral-700 space-y-2">
+            <button class="w-full px-3 py-2 bg-neutral-800 hover:bg-neutral-700 text-neutral-200 rounded-pill text-sm transition-colors">
+              Logout
+            </button>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-neutral-950 border-t border-neutral-800 py-6 text-neutral-400 text-center text-sm">
+    <p>&copy; 2024 App. All rights reserved.</p>
+  </footer>
+
+  <!-- Layout & Animation Scripts -->
+  <script src="./assets/js/layout.js"></script>
+</body>
+</html>

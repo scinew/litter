@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Alerts - App" />
+  <title>Alerts - App</title>
+
+  <!-- Tailwind Configuration -->
+  <script src="./assets/js/tailwind-config.js"></script>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Global Styles -->
+  <link rel="stylesheet" href="./assets/css/global.css" />
+
+  <!-- Preload fonts -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" />
+</head>
+
+<body class="dark">
+  <!-- Layout Header & Navigation -->
+  <header class="sticky top-0 z-50 bg-neutral-950/95 backdrop-blur-sm border-b border-neutral-800 fade-slide-in">
+    <div class="container mx-auto px-4 py-4">
+      <div class="flex items-center justify-between">
+        <!-- Brand -->
+        <div class="flex items-center gap-2">
+          <div class="w-8 h-8 bg-gradient-to-br from-blue-500 to-blue-600 rounded-bubble flex items-center justify-center">
+            <span class="text-white font-bold text-sm">A</span>
+          </div>
+          <span class="text-xl font-bold text-neutral-100 hidden sm:inline">App</span>
+        </div>
+
+        <!-- Primary Navigation -->
+        <nav class="flex items-center gap-1 md:gap-4">
+          <a href="./index.html" class="nav-item px-3 py-2 rounded-pill text-neutral-400 hover:text-neutral-200 transition-colors duration-200 text-sm md:text-base">
+            Home
+          </a>
+          <a href="./alerts.html" class="nav-item px-3 py-2 rounded-pill text-neutral-200 font-semibold transition-colors duration-200 text-sm md:text-base">
+            Alerts
+          </a>
+          <a href="./profile.html" class="nav-item px-3 py-2 rounded-pill text-neutral-400 hover:text-neutral-200 transition-colors duration-200 text-sm md:text-base">
+            Profile
+          </a>
+        </nav>
+
+        <!-- Action Buttons -->
+        <div class="flex items-center gap-2">
+          <button class="px-3 py-2 md:px-4 md:py-2 bg-neutral-800 hover:bg-neutral-700 text-neutral-200 rounded-pill text-sm transition-colors duration-200">
+            Settings
+          </button>
+          <button class="px-3 py-2 md:px-4 md:py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-pill text-sm font-medium transition-colors duration-200">
+            Sign In
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Layout Grid -->
+  <div class="flex flex-col md:grid md:grid-cols-[240px_1fr_240px] md:gap-4 min-h-[calc(100vh-73px)] bg-neutral-950">
+    <!-- Left Rail Sidebar -->
+    <aside class="hidden md:block bg-neutral-900 border-r border-neutral-800 p-4 overflow-y-auto">
+      <div class="space-y-4 fade-slide-in">
+        <h3 class="text-xs font-semibold text-neutral-400 uppercase tracking-wider">Filters</h3>
+        <div class="space-y-2">
+          <div class="bubble-surface p-3 text-neutral-300 text-sm cursor-pointer bg-neutral-800 border-neutral-600">
+            All Alerts
+          </div>
+          <div class="bubble-surface p-3 text-neutral-300 text-sm cursor-pointer hover:bg-neutral-800">
+            Critical
+          </div>
+          <div class="bubble-surface p-3 text-neutral-300 text-sm cursor-pointer hover:bg-neutral-800">
+            Warnings
+          </div>
+          <div class="bubble-surface p-3 text-neutral-300 text-sm cursor-pointer hover:bg-neutral-800">
+            Resolved
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="flex-1 p-4 md:p-6 overflow-y-auto">
+      <div class="fade-slide-in space-y-8">
+        <!-- Header Section -->
+        <div class="flex items-center justify-between">
+          <div>
+            <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-neutral-100 mb-2">Alerts</h1>
+            <p class="text-neutral-400 text-base md:text-lg">
+              Monitor and manage system notifications and alerts.
+            </p>
+          </div>
+          <button class="px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white rounded-pill font-medium transition-colors duration-200">
+            Clear All
+          </button>
+        </div>
+
+        <!-- Alert Items -->
+        <div class="space-y-4">
+          <!-- Alert 1 - Critical -->
+          <div class="bubble-surface p-5 border-l-4 border-red-500 hover:shadow-bubble-hover transition-all duration-300" data-animate>
+            <div class="flex items-start justify-between">
+              <div class="flex-1">
+                <h3 class="text-lg font-semibold text-red-400 mb-1">Critical Alert</h3>
+                <p class="text-neutral-300 mb-2">
+                  High CPU usage detected on server instance prod-01. Usage at 94%.
+                </p>
+                <p class="text-sm text-neutral-500">5 minutes ago • prod-01</p>
+              </div>
+              <button class="text-neutral-400 hover:text-neutral-200 text-xl">×</button>
+            </div>
+          </div>
+
+          <!-- Alert 2 - Warning -->
+          <div class="bubble-surface p-5 border-l-4 border-yellow-500 hover:shadow-bubble-hover transition-all duration-300" data-animate>
+            <div class="flex items-start justify-between">
+              <div class="flex-1">
+                <h3 class="text-lg font-semibold text-yellow-400 mb-1">Warning</h3>
+                <p class="text-neutral-300 mb-2">
+                  Disk usage on database server reaching 85%. Consider cleanup.
+                </p>
+                <p class="text-sm text-neutral-500">22 minutes ago • db-prod-02</p>
+              </div>
+              <button class="text-neutral-400 hover:text-neutral-200 text-xl">×</button>
+            </div>
+          </div>
+
+          <!-- Alert 3 - Info -->
+          <div class="bubble-surface p-5 border-l-4 border-blue-500 hover:shadow-bubble-hover transition-all duration-300" data-animate>
+            <div class="flex items-start justify-between">
+              <div class="flex-1">
+                <h3 class="text-lg font-semibold text-blue-400 mb-1">Info</h3>
+                <p class="text-neutral-300 mb-2">
+                  Scheduled maintenance window completed successfully.
+                </p>
+                <p class="text-sm text-neutral-500">1 hour ago • system</p>
+              </div>
+              <button class="text-neutral-400 hover:text-neutral-200 text-xl">×</button>
+            </div>
+          </div>
+
+          <!-- Alert 4 - Success -->
+          <div class="bubble-surface p-5 border-l-4 border-green-500 hover:shadow-bubble-hover transition-all duration-300" data-animate>
+            <div class="flex items-start justify-between">
+              <div class="flex-1">
+                <h3 class="text-lg font-semibold text-green-400 mb-1">Success</h3>
+                <p class="text-neutral-300 mb-2">
+                  Backup completed successfully. Total size: 45 GB.
+                </p>
+                <p class="text-sm text-neutral-500">2 hours ago • backup-system</p>
+              </div>
+              <button class="text-neutral-400 hover:text-neutral-200 text-xl">×</button>
+            </div>
+          </div>
+
+          <!-- Alert 5 - Warning -->
+          <div class="bubble-surface p-5 border-l-4 border-yellow-500 hover:shadow-bubble-hover transition-all duration-300" data-animate>
+            <div class="flex items-start justify-between">
+              <div class="flex-1">
+                <h3 class="text-lg font-semibold text-yellow-400 mb-1">Warning</h3>
+                <p class="text-neutral-300 mb-2">
+                  API response time degradation detected. Average latency: 2.5s.
+                </p>
+                <p class="text-sm text-neutral-500">3 hours ago • api-gateway</p>
+              </div>
+              <button class="text-neutral-400 hover:text-neutral-200 text-xl">×</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- No More Alerts -->
+        <div class="text-center py-12">
+          <p class="text-neutral-400">No more alerts to display</p>
+        </div>
+      </div>
+    </main>
+
+    <!-- Right Rail Sidebar -->
+    <aside class="hidden lg:block bg-neutral-900 border-l border-neutral-800 p-4 overflow-y-auto">
+      <div class="space-y-4 fade-slide-in">
+        <h3 class="text-xs font-semibold text-neutral-400 uppercase tracking-wider">Statistics</h3>
+        <div class="bubble-surface p-4 space-y-4">
+          <div>
+            <p class="text-xs text-neutral-400 uppercase tracking-wider">Critical</p>
+            <p class="text-2xl font-bold text-red-400">1</p>
+          </div>
+          <div>
+            <p class="text-xs text-neutral-400 uppercase tracking-wider">Warnings</p>
+            <p class="text-2xl font-bold text-yellow-400">2</p>
+          </div>
+          <div>
+            <p class="text-xs text-neutral-400 uppercase tracking-wider">Info</p>
+            <p class="text-2xl font-bold text-blue-400">1</p>
+          </div>
+          <div class="pt-2 border-t border-neutral-700">
+            <button class="w-full px-3 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-pill text-sm font-medium transition-colors">
+              Configure
+            </button>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-neutral-950 border-t border-neutral-800 py-6 text-neutral-400 text-center text-sm">
+    <p>&copy; 2024 App. All rights reserved.</p>
+  </footer>
+
+  <!-- Layout & Animation Scripts -->
+  <script src="./assets/js/layout.js"></script>
+</body>
+</html>

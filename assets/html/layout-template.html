@@ -1,0 +1,85 @@
+<!-- Shared Layout Template - Include this structure in all pages -->
+
+<!-- Header Navigation -->
+<header class="sticky top-0 z-50 bg-neutral-950/95 backdrop-blur-sm border-b border-neutral-800 fade-slide-in">
+  <div class="container mx-auto px-4 py-4">
+    <div class="flex items-center justify-between">
+      <!-- Brand -->
+      <div class="flex items-center gap-2">
+        <div class="w-8 h-8 bg-gradient-to-br from-blue-500 to-blue-600 rounded-bubble flex items-center justify-center">
+          <span class="text-white font-bold text-sm">A</span>
+        </div>
+        <span class="text-xl font-bold text-neutral-100 hidden sm:inline">App</span>
+      </div>
+
+      <!-- Primary Navigation -->
+      <nav class="flex items-center gap-1 md:gap-4">
+        <a href="./index.html" class="nav-item px-3 py-2 rounded-pill text-neutral-400 hover:text-neutral-200 transition-colors duration-200 text-sm md:text-base">
+          Home
+        </a>
+        <a href="./alerts.html" class="nav-item px-3 py-2 rounded-pill text-neutral-400 hover:text-neutral-200 transition-colors duration-200 text-sm md:text-base">
+          Alerts
+        </a>
+        <a href="./profile.html" class="nav-item px-3 py-2 rounded-pill text-neutral-400 hover:text-neutral-200 transition-colors duration-200 text-sm md:text-base">
+          Profile
+        </a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="flex items-center gap-2">
+        <button class="px-3 py-2 md:px-4 md:py-2 bg-neutral-800 hover:bg-neutral-700 text-neutral-200 rounded-pill text-sm transition-colors duration-200">
+          Settings
+        </button>
+        <button class="px-3 py-2 md:px-4 md:py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-pill text-sm font-medium transition-colors duration-200">
+          Sign In
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Main Layout Grid -->
+<div class="flex flex-col md:grid md:grid-cols-[240px_1fr_240px] md:gap-4 min-h-[calc(100vh-73px)]">
+  <!-- Left Rail Sidebar -->
+  <aside class="hidden md:block bg-neutral-900 border-r border-neutral-800 p-4 overflow-y-auto">
+    <div class="space-y-4">
+      <h3 class="text-xs font-semibold text-neutral-400 uppercase tracking-wider">Sidebar</h3>
+      <div class="space-y-2">
+        <div class="bubble-surface p-3 text-neutral-300 text-sm cursor-pointer hover:bg-neutral-800">
+          Item 1
+        </div>
+        <div class="bubble-surface p-3 text-neutral-300 text-sm cursor-pointer hover:bg-neutral-800">
+          Item 2
+        </div>
+        <div class="bubble-surface p-3 text-neutral-300 text-sm cursor-pointer hover:bg-neutral-800">
+          Item 3
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Content Area -->
+  <main class="flex-1 p-4 md:p-6 overflow-y-auto">
+    <!-- Page content goes here -->
+    <div id="page-content" class="fade-slide-in">
+      <!-- Individual page content will be inserted here -->
+    </div>
+  </main>
+
+  <!-- Right Rail Sidebar -->
+  <aside class="hidden lg:block bg-neutral-900 border-l border-neutral-800 p-4 overflow-y-auto">
+    <div class="space-y-4">
+      <h3 class="text-xs font-semibold text-neutral-400 uppercase tracking-wider">Info Panel</h3>
+      <div class="bubble-surface p-4">
+        <p class="text-neutral-300 text-sm">
+          Additional information and controls will appear here.
+        </p>
+      </div>
+    </div>
+  </aside>
+</div>
+
+<!-- Footer -->
+<footer class="bg-neutral-950 border-t border-neutral-800 py-6 text-neutral-400 text-center text-sm">
+  <p>&copy; 2024 App. All rights reserved.</p>
+</footer>

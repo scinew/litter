@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base Styles */
+* {
+  @apply transition-colors duration-200;
+}
+
+body {
+  @apply bg-neutral-950 text-neutral-100 font-sans antialiased overflow-x-hidden;
+  font-family: 'Inter', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Page Load Animations */
+@keyframes fadeInSlide {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Reusable Component Utilities */
+
+/* Bubble Surface - rounded container with subtle shadow */
+.bubble-surface {
+  @apply bg-neutral-900 rounded-bubble shadow-bubble border border-neutral-800 transition-all duration-300;
+}
+
+.bubble-surface:hover {
+  @apply border-neutral-700 shadow-bubble-hover;
+}
+
+/* Glass Effect - semi-transparent overlay with backdrop blur */
+.glass {
+  @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-bubble;
+}
+
+.glass-highlight {
+  @apply bg-white/10 backdrop-blur-sm border border-white/20 rounded-bubble;
+}
+
+/* Spring Transition */
+.spring-transition {
+  @apply transition-all duration-300 cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Smooth Fade/Slide Entry Animation */
+.fade-slide-in {
+  animation: fadeInSlide 0.5s ease-out;
+}
+
+.fade-in {
+  animation: fadeIn 0.4s ease-out;
+}
+
+.slide-in-left {
+  animation: slideInLeft 0.4s ease-out;
+}
+
+/* Responsive Typography */
+h1 {
+  @apply text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight;
+}
+
+h2 {
+  @apply text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight;
+}
+
+h3 {
+  @apply text-xl md:text-2xl lg:text-3xl font-semibold tracking-tight;
+}
+
+p {
+  @apply text-sm md:text-base lg:text-lg leading-relaxed;
+}
+
+/* Link Styles */
+a {
+  @apply text-blue-400 hover:text-blue-300 underline underline-offset-2 transition-colors;
+}
+
+/* Button Base Styles */
+button {
+  @apply transition-all duration-200;
+}
+
+button:focus {
+  @apply outline-none ring-2 ring-offset-2 ring-offset-neutral-950 ring-blue-500;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-neutral-950;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-neutral-700 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-neutral-600;
+}
+
+/* Responsive container adjustments */
+@media (max-width: 768px) {
+  body {
+    @apply text-xs sm:text-sm;
+  }
+
+  h1 {
+    @apply text-2xl sm:text-3xl;
+  }
+
+  h2 {
+    @apply text-xl sm:text-2xl;
+  }
+
+  h3 {
+    @apply text-lg sm:text-xl;
+  }
+}

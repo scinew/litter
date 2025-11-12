@@ -14,6 +14,140 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
+/* Light Theme */
+body.light {
+  @apply bg-neutral-50 text-neutral-900;
+}
+
+body.light header {
+  @apply bg-neutral-50/95 border-neutral-200;
+}
+
+body.light .bubble-surface {
+  @apply bg-white border-neutral-200;
+}
+
+body.light .bubble-surface:hover {
+  @apply border-neutral-300 shadow-md;
+}
+
+body.light footer {
+  @apply bg-neutral-50 border-neutral-200 text-neutral-600;
+}
+
+body.light .nav-item.text-neutral-100,
+body.light .text-neutral-100 {
+  @apply text-neutral-900;
+}
+
+body.light .nav-item.text-neutral-200,
+body.light .text-neutral-200 {
+  @apply text-neutral-800;
+}
+
+body.light .nav-item.text-neutral-400,
+body.light .text-neutral-400 {
+  @apply text-neutral-600;
+}
+
+body.light .text-neutral-500 {
+  @apply text-neutral-500;
+}
+
+body.light .text-neutral-300 {
+  @apply text-neutral-700;
+}
+
+body.light .bg-neutral-950 {
+  @apply bg-neutral-50;
+}
+
+body.light .bg-neutral-900 {
+  @apply bg-white;
+}
+
+body.light .bg-neutral-800 {
+  @apply bg-neutral-100;
+}
+
+body.light .bg-neutral-900\/80,
+body.light .bg-neutral-900\/70,
+body.light .bg-neutral-900\/60 {
+  @apply bg-white/90;
+}
+
+body.light .border-neutral-800 {
+  @apply border-neutral-200;
+}
+
+body.light .border-neutral-700 {
+  @apply border-neutral-300;
+}
+
+body.light .hover\:bg-neutral-700:hover {
+  @apply bg-neutral-200;
+}
+
+body.light .hover\:bg-neutral-900:hover {
+  @apply bg-neutral-100;
+}
+
+body.light .hover\:text-neutral-200:hover {
+  @apply text-neutral-900;
+}
+
+body.light .hover\:text-neutral-100:hover {
+  @apply text-neutral-900;
+}
+
+body.light .hover\:border-neutral-800:hover {
+  @apply border-neutral-300;
+}
+
+body.light aside {
+  @apply bg-white border-neutral-200;
+}
+
+body.light .glass {
+  @apply bg-black/5 border-black/10;
+}
+
+body.light .glass-highlight {
+  @apply bg-black/10 border-black/20;
+}
+
+[data-modal] {
+  @apply transition-opacity duration-200 ease-out;
+}
+
+[data-modal] .bubble-surface {
+  @apply transform transition-transform duration-200 ease-out;
+}
+
+[data-modal].opacity-0 .bubble-surface {
+  @apply translate-y-4 opacity-0;
+}
+
+[data-modal]:not(.opacity-0) .bubble-surface {
+  @apply translate-y-0 opacity-100;
+}
+
+body.light [data-modal-overlay] {
+  @apply bg-neutral-950/70;
+}
+
+body.spill-modal-open {
+  overflow: hidden;
+}
+
+[data-modal].hidden {
+  display: none;
+}
+
+[data-modal]:not(.hidden) {
+  display: block;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -75,6 +209,15 @@ html {
   @apply transition-all duration-300 cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
+/* Scale utilities for interactions */
+.scale-105 {
+  transform: scale(1.05);
+}
+
+.scale-110 {
+  transform: scale(1.1);
+}
+
 /* Smooth Fade/Slide Entry Animation */
 .fade-slide-in {
   animation: fadeInSlide 0.5s ease-out;
@@ -126,6 +269,26 @@ a {
 /* Button Base Styles */
 button {
   @apply transition-all duration-200;
+}
+
+button.is-active {
+  @apply font-semibold;
+}
+
+button.is-active.text-blue-400 {
+  @apply ring-2 ring-offset-2 ring-offset-neutral-950 ring-blue-500/50;
+}
+
+body.light button.is-active.text-blue-400 {
+  @apply ring-offset-neutral-50;
+}
+
+button.is-active.text-green-400 {
+  @apply ring-2 ring-offset-2 ring-offset-neutral-950 ring-green-500/50;
+}
+
+body.light button.is-active.text-green-400 {
+  @apply ring-offset-neutral-50;
 }
 
 button:focus {

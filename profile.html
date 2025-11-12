@@ -83,106 +83,114 @@
 
     <!-- Main Content Area -->
     <main class="flex-1 p-4 md:p-6 overflow-y-auto">
-      <div class="fade-slide-in space-y-8 max-w-4xl">
-        <!-- Profile Header -->
-        <div class="bubble-surface p-8 md:p-12">
-          <div class="flex flex-col md:flex-row items-start md:items-center gap-6">
-            <!-- Avatar -->
-            <div class="w-24 h-24 md:w-32 md:h-32 bg-gradient-to-br from-blue-500 to-purple-600 rounded-bubble flex items-center justify-center flex-shrink-0">
-              <span class="text-5xl md:text-6xl">👤</span>
-            </div>
+      <div class="fade-slide-in space-y-6 max-w-4xl">
+        <!-- Hero Section -->
+        <section class="relative">
+          <!-- Cover Bubble -->
+          <div class="h-32 md:h-48 bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 rounded-bubble relative overflow-hidden">
+            <div class="absolute inset-0 bg-black/20"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+          </div>
+          
+          <!-- Profile Content -->
+          <div class="relative px-4 md:px-6 -mt-16 md:-mt-20">
+            <div class="flex flex-col md:flex-row items-start md:items-end gap-4 md:gap-6">
+              <!-- Avatar Bubble -->
+              <div class="w-24 h-24 md:w-32 md:h-32 bg-gradient-to-br from-blue-500 to-purple-600 rounded-bubble flex items-center justify-center flex-shrink-0 border-4 border-neutral-950 shadow-bubble-hover">
+                <span class="text-4xl md:text-5xl">👤</span>
+              </div>
 
-            <!-- Profile Info -->
-            <div class="flex-1">
-              <h1 class="text-3xl md:text-4xl font-bold text-neutral-100 mb-2">John Doe</h1>
-              <p class="text-neutral-400 mb-4">Professional • Designer & Developer</p>
-              <div class="flex gap-2">
-                <button class="px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-pill text-sm font-medium transition-colors">
+              <!-- User Info -->
+              <div class="flex-1 md:mb-2">
+                <h1 class="text-2xl md:text-4xl font-bold text-neutral-100 mb-1">Alexandra Rivers</h1>
+                <p class="text-neutral-400 mb-3">@alex_rivers</p>
+                <p class="text-neutral-300 text-sm md:text-base leading-relaxed">
+                  Creative technologist • Building bridges between art and code • 
+                  Exploring the intersection of design, sound, and human experience
+                </p>
+              </div>
+
+              <!-- Action Buttons -->
+              <div class="flex flex-wrap gap-2 md:mb-2">
+                <button class="px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-pill text-sm font-medium transition-colors duration-200">
                   Edit Profile
                 </button>
-                <button class="px-4 py-2 bg-neutral-800 hover:bg-neutral-700 text-neutral-200 rounded-pill text-sm transition-colors">
+                <button class="px-4 py-2 bg-neutral-800 hover:bg-neutral-700 text-neutral-200 rounded-pill text-sm transition-colors duration-200">
                   Share
+                </button>
+                <button class="px-4 py-2 bg-neutral-800 hover:bg-neutral-700 text-neutral-200 rounded-pill text-sm transition-colors duration-200">
+                  Message
                 </button>
               </div>
             </div>
-          </div>
-        </div>
 
-        <!-- Profile Sections -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <!-- About Section -->
-          <div class="bubble-surface p-6" data-animate>
-            <h2 class="text-xl font-semibold text-neutral-100 mb-4">About</h2>
-            <p class="text-neutral-300 leading-relaxed mb-4">
-              Passionate about creating beautiful and functional user experiences. Specialized in modern web technologies
-              and design systems.
-            </p>
-            <div class="space-y-2">
-              <p class="text-sm text-neutral-400"><span class="font-semibold text-neutral-300">Location:</span> San Francisco, CA</p>
-              <p class="text-sm text-neutral-400"><span class="font-semibold text-neutral-300">Member Since:</span> January 2020</p>
-              <p class="text-sm text-neutral-400"><span class="font-semibold text-neutral-300">Status:</span> <span class="text-green-400">Active</span></p>
-            </div>
-          </div>
-
-          <!-- Stats Section -->
-          <div class="bubble-surface p-6" data-animate>
-            <h2 class="text-xl font-semibold text-neutral-100 mb-4">Stats</h2>
-            <div class="space-y-3">
-              <div class="flex justify-between items-center">
-                <span class="text-neutral-400">Projects Completed</span>
-                <span class="font-semibold text-neutral-100">32</span>
+            <!-- Metrics -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
+              <div class="text-center p-4 bg-neutral-900/60 rounded-bubble border border-neutral-800">
+                <div class="text-2xl font-bold text-neutral-100">847</div>
+                <div class="text-xs text-neutral-400 uppercase tracking-wider">Spills</div>
               </div>
-              <div class="flex justify-between items-center">
-                <span class="text-neutral-400">Followers</span>
-                <span class="font-semibold text-neutral-100">1,234</span>
+              <div class="text-center p-4 bg-neutral-900/60 rounded-bubble border border-neutral-800">
+                <div class="text-2xl font-bold text-neutral-100">3.2k</div>
+                <div class="text-xs text-neutral-400 uppercase tracking-wider">Refills</div>
               </div>
-              <div class="flex justify-between items-center">
-                <span class="text-neutral-400">Following</span>
-                <span class="font-semibold text-neutral-100">456</span>
+              <div class="text-center p-4 bg-neutral-900/60 rounded-bubble border border-neutral-800">
+                <div class="text-2xl font-bold text-neutral-100">12.4k</div>
+                <div class="text-xs text-neutral-400 uppercase tracking-wider">Claps</div>
               </div>
-              <div class="flex justify-between items-center">
-                <span class="text-neutral-400">Contributions</span>
-                <span class="font-semibold text-neutral-100">2,891</span>
+              <div class="text-center p-4 bg-neutral-900/60 rounded-bubble border border-neutral-800">
+                <div class="text-2xl font-bold text-neutral-100">5.8k</div>
+                <div class="text-xs text-neutral-400 uppercase tracking-wider">Followers</div>
               </div>
             </div>
           </div>
-        </div>
+        </section>
 
-        <!-- Skills Section -->
-        <div class="bubble-surface p-6" data-animate>
-          <h2 class="text-xl font-semibold text-neutral-100 mb-4">Skills</h2>
-          <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
-            <span class="px-3 py-2 bg-blue-500/20 text-blue-400 rounded-pill text-sm">React</span>
-            <span class="px-3 py-2 bg-blue-500/20 text-blue-400 rounded-pill text-sm">Tailwind CSS</span>
-            <span class="px-3 py-2 bg-purple-500/20 text-purple-400 rounded-pill text-sm">JavaScript</span>
-            <span class="px-3 py-2 bg-purple-500/20 text-purple-400 rounded-pill text-sm">TypeScript</span>
-            <span class="px-3 py-2 bg-green-500/20 text-green-400 rounded-pill text-sm">UI Design</span>
-            <span class="px-3 py-2 bg-green-500/20 text-green-400 rounded-pill text-sm">UX Design</span>
+        <!-- Tabs Section -->
+        <section class="bubble-surface p-1">
+          <!-- Tab Navigation -->
+          <div class="flex overflow-x-auto scrollbar-hide md:overflow-visible" role="tablist">
+            <button 
+              class="tab-button flex-1 min-w-fit px-4 py-2 md:px-6 md:py-3 rounded-pill text-sm font-medium transition-all duration-200 whitespace-nowrap bg-neutral-800 text-neutral-100"
+              data-tab="lits"
+              role="tab"
+              aria-selected="true">
+              Lits
+            </button>
+            <button 
+              class="tab-button flex-1 min-w-fit px-4 py-2 md:px-6 md:py-3 rounded-pill text-sm font-medium transition-all duration-200 whitespace-nowrap text-neutral-400 hover:text-neutral-200"
+              data-tab="refills"
+              role="tab"
+              aria-selected="false">
+              Refills
+            </button>
+            <button 
+              class="tab-button flex-1 min-w-fit px-4 py-2 md:px-6 md:py-3 rounded-pill text-sm font-medium transition-all duration-200 whitespace-nowrap text-neutral-400 hover:text-neutral-200"
+              data-tab="media"
+              role="tab"
+              aria-selected="false">
+              Media
+            </button>
           </div>
-        </div>
 
-        <!-- Recent Activity Section -->
-        <div class="bubble-surface p-6" data-animate>
-          <h2 class="text-xl font-semibold text-neutral-100 mb-4">Recent Activity</h2>
-          <div class="space-y-4">
-            <div class="pb-4 border-b border-neutral-700 last:border-b-0">
-              <p class="text-neutral-300 font-medium">Updated profile information</p>
-              <p class="text-sm text-neutral-500">2 days ago</p>
+          <!-- Tab Content -->
+          <div class="mt-6">
+            <!-- Lits Tab -->
+            <div class="tab-content space-y-4" data-tab-content="lits">
+              <!-- Lit cards will be inserted here -->
             </div>
-            <div class="pb-4 border-b border-neutral-700 last:border-b-0">
-              <p class="text-neutral-300 font-medium">Completed project: Design System v2</p>
-              <p class="text-sm text-neutral-500">1 week ago</p>
+
+            <!-- Refills Tab -->
+            <div class="tab-content space-y-4 hidden" data-tab-content="refills">
+              <!-- Refill content will be inserted here -->
             </div>
-            <div class="pb-4 border-b border-neutral-700 last:border-b-0">
-              <p class="text-neutral-300 font-medium">Added new skill: Tailwind CSS</p>
-              <p class="text-sm text-neutral-500">2 weeks ago</p>
-            </div>
-            <div class="pb-4 border-b border-neutral-700 last:border-b-0">
-              <p class="text-neutral-300 font-medium">Changed profile picture</p>
-              <p class="text-sm text-neutral-500">3 weeks ago</p>
+
+            <!-- Media Tab -->
+            <div class="tab-content space-y-4 hidden" data-tab-content="media">
+              <!-- Media content will be inserted here -->
             </div>
           </div>
-        </div>
+        </section>
       </div>
     </main>
 
@@ -193,7 +201,7 @@
         <div class="bubble-surface p-4 space-y-3">
           <div>
             <p class="text-xs text-neutral-400 uppercase tracking-wider">Email</p>
-            <p class="text-sm text-neutral-300 truncate">john@example.com</p>
+            <p class="text-sm text-neutral-300 truncate">alex.rivers@example.com</p>
           </div>
           <div>
             <p class="text-xs text-neutral-400 uppercase tracking-wider">Plan</p>
@@ -213,6 +221,307 @@
   <footer class="bg-neutral-950 border-t border-neutral-800 py-6 text-neutral-400 text-center text-sm">
     <p>&copy; 2024 App. All rights reserved.</p>
   </footer>
+
+  <!-- Profile Page Scripts -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Mock data for profile content
+      const mockProfileData = {
+        lits: [
+          {
+            id: 'profile-lit-01',
+            author: 'Alexandra Rivers',
+            handle: '@alex_rivers',
+            avatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=160&h=160&q=80',
+            timestamp: '3h ago',
+            content: [
+              'Just wrapped up a new sound design pack inspired by urban decay and renewal. The contrast between rust and regrowth creates this beautiful texture.',
+              'Each sample tells a story of transformation. Available for free in the Spill community.'
+            ],
+            tags: ['#sounddesign', '#urbanexploration', '#freepack'],
+            media: {
+              type: 'image',
+              src: 'https://images.unsplash.com/photo-1511192336575-5a791e5772ef?auto=format&fit=crop&w=1200&q=80',
+              alt: 'Urban decay texture study'
+            },
+            claps: 234,
+            refills: 67
+          },
+          {
+            id: 'profile-lit-02',
+            author: 'Alexandra Rivers',
+            handle: '@alex_rivers',
+            avatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=160&h=160&q=80',
+            timestamp: '1d ago',
+            content: [
+              'Experimenting with generative art using audio-reactive algorithms. The visuals dance to the frequency spectrum in real-time.',
+              'Next step: integrating haptic feedback for immersive installations.'
+            ],
+            tags: ['#generativeart', '#audiovisual', '#interactive'],
+            media: {
+              type: 'image',
+              src: 'https://images.unsplash.com/photo-1579546929518-9e396f3a8034?auto=format&fit=crop&w=1200&q=80',
+              alt: 'Audio reactive visualization'
+            },
+            claps: 456,
+            refills: 89
+          },
+          {
+            id: 'profile-lit-03',
+            author: 'Alexandra Rivers',
+            handle: '@alex_rivers',
+            avatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=160&h=160&q=80',
+            timestamp: '2d ago',
+            content: [
+              'Community workshop this weekend! We\'ll be building DIY synthesizers from recycled electronics.',
+              'No experience needed - just curiosity and a willingness to make some noise.'
+            ],
+            tags: ['#workshop', '#diy', '#synthesizer', '#community'],
+            media: null,
+            claps: 123,
+            refills: 34
+          }
+        ],
+        refills: [
+          {
+            id: 'profile-refill-01',
+            originalAuthor: 'Maya Étoile',
+            originalHandle: '@mayaetoile',
+            originalContent: 'Dropped a new pack of monochrome gradients for Spill designers.',
+            refillAuthor: 'Alexandra Rivers',
+            refillHandle: '@alex_rivers',
+            refillContent: 'These gradients are perfect for the ambient audio visualizer I\'m building!',
+            timestamp: '5h ago',
+            claps: 45
+          },
+          {
+            id: 'profile-refill-02',
+            originalAuthor: 'Noah Hale',
+            originalHandle: '@noahhale',
+            originalContent: 'Found this hidden coffee spot in the old textile district.',
+            refillAuthor: 'Alexandra Rivers',
+            refillHandle: '@alex_rivers',
+            refillContent: 'The acoustics in there are incredible! Perfect for intimate acoustic sessions.',
+            timestamp: '1d ago',
+            claps: 78
+          }
+        ],
+        media: [
+          {
+            id: 'profile-media-01',
+            type: 'image',
+            src: 'https://images.unsplash.com/photo-1532274402911-5a369e4c4bb5?auto=format&fit=crop&w=800&h=600&q=80',
+            alt: 'Abstract sound visualization',
+            timestamp: '3h ago',
+            title: 'Frequency Landscapes'
+          },
+          {
+            id: 'profile-media-02',
+            type: 'image',
+            src: 'https://images.unsplash.com/photo-1571330735066-03aaa9429d89?auto=format&fit=crop&w=800&h=600&q=80',
+            alt: 'Electronic circuit board',
+            timestamp: '1d ago',
+            title: 'Circuit Aesthetics'
+          },
+          {
+            id: 'profile-media-03',
+            type: 'image',
+            src: 'https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?auto=format&fit=crop&w=800&h=600&q=80',
+            alt: 'Music production setup',
+            timestamp: '2d ago',
+            title: 'Studio Sessions'
+          }
+        ]
+      };
+
+      // Initialize tabs
+      initializeTabs();
+      
+      // Load initial content
+      loadTabContent('lits');
+
+      function initializeTabs() {
+        const tabButtons = document.querySelectorAll('.tab-button');
+        
+        tabButtons.forEach(button => {
+          button.addEventListener('click', () => {
+            const targetTab = button.dataset.tab;
+            
+            // Update button states
+            tabButtons.forEach(btn => {
+              btn.classList.remove('bg-neutral-800', 'text-neutral-100');
+              btn.classList.add('text-neutral-400', 'hover:text-neutral-200');
+              btn.setAttribute('aria-selected', 'false');
+            });
+            
+            button.classList.add('bg-neutral-800', 'text-neutral-100');
+            button.classList.remove('text-neutral-400', 'hover:text-neutral-200');
+            button.setAttribute('aria-selected', 'true');
+            
+            // Update content with animation
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => {
+              content.classList.add('fade-out');
+              setTimeout(() => {
+                content.classList.add('hidden');
+                content.classList.remove('fade-out');
+              }, 200);
+            });
+            
+            setTimeout(() => {
+              loadTabContent(targetTab);
+            }, 200);
+          });
+        });
+      }
+
+      function loadTabContent(tabName) {
+        const contentContainer = document.querySelector(`[data-tab-content="${tabName}"]`);
+        if (!contentContainer) return;
+        
+        contentContainer.classList.remove('hidden');
+        contentContainer.classList.add('fade-in');
+        
+        let content = '';
+        
+        switch(tabName) {
+          case 'lits':
+            content = renderLits(mockProfileData.lits);
+            break;
+          case 'refills':
+            content = renderRefills(mockProfileData.refills);
+            break;
+          case 'media':
+            content = renderMedia(mockProfileData.media);
+            break;
+        }
+        
+        contentContainer.innerHTML = content;
+        
+        // Re-initialize animations for new content
+        const newElements = contentContainer.querySelectorAll('[data-animate]');
+        newElements.forEach(el => {
+          el.classList.add('fade-slide-in');
+        });
+      }
+
+      function renderLits(lits) {
+        return lits.map(lit => {
+          const paragraphs = Array.isArray(lit.content)
+            ? lit.content.map(p => `<p class="text-neutral-300 leading-relaxed">${p}</p>`).join('')
+            : `<p class="text-neutral-300 leading-relaxed">${lit.content}</p>`;
+
+          const tags = Array.isArray(lit.tags) && lit.tags.length
+            ? `<div class="flex flex-wrap gap-2">${lit.tags
+              .map(tag => `<span class="px-3 py-1 rounded-pill border border-neutral-800 text-xs font-medium tracking-wide text-neutral-400">${tag}</span>`)
+              .join('')}</div>`
+            : '';
+
+          const media = lit.media && lit.media.type === 'image'
+            ? `<div class="overflow-hidden rounded-bubble border border-neutral-800/70 bg-neutral-900/70" data-media-type="image">
+                <img src="${lit.media.src}" alt="${lit.media.alt}" class="w-full h-56 object-cover" />
+              </div>`
+            : '';
+
+          return `
+            <article class="bubble-surface p-5 md:p-6 space-y-4 transition-all duration-300 hover:shadow-bubble-hover focus-within:shadow-bubble-hover" data-lit-id="${lit.id}" data-animate>
+              <div class="flex items-start gap-4">
+                <img src="${lit.avatar}" alt="${lit.author} avatar" class="w-12 h-12 rounded-full object-cover border border-neutral-800" />
+                <div class="flex-1 space-y-4">
+                  <header class="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
+                    <div class="flex flex-wrap items-center gap-2">
+                      <span class="text-neutral-100 font-semibold">${lit.author}</span>
+                      <span class="text-sm text-neutral-500">${lit.handle}</span>
+                      <span class="hidden sm:inline-flex w-1 h-1 rounded-full bg-neutral-700"></span>
+                      <span class="text-xs text-neutral-500">${lit.timestamp}</span>
+                    </div>
+                  </header>
+                  <div class="space-y-3 text-sm md:text-base">
+                    ${paragraphs}
+                  </div>
+                  ${media}
+                  ${tags}
+                  <div class="flex flex-wrap items-center gap-3 pt-4 border-t border-neutral-800/70" data-actions>
+                    <button type="button" class="flex items-center gap-2 px-3 py-2 rounded-pill text-sm text-neutral-400 hover:text-neutral-100 hover:bg-neutral-900 transition" data-action="clap" aria-label="Clap for ${lit.author}" data-count="${lit.claps}">
+                      <span class="text-lg leading-none">👏</span>
+                      <span>${lit.claps.toLocaleString()}</span>
+                    </button>
+                    <button type="button" class="flex items-center gap-2 px-3 py-2 rounded-pill text-sm text-neutral-400 hover:text-neutral-100 hover:bg-neutral-900 transition" data-action="refill" aria-label="Refill ${lit.author}'s lit" data-count="${lit.refills}">
+                      <span class="text-lg leading-none">🔁</span>
+                      <span>${lit.refills.toLocaleString()}</span>
+                    </button>
+                    <button type="button" class="flex items-center gap-2 px-3 py-2 rounded-pill text-sm text-neutral-400 hover:text-neutral-100 hover:bg-neutral-900 transition" data-action="thread" aria-label="Open thread with ${lit.author}">
+                      <span class="text-lg leading-none">💬</span>
+                      <span>Thread</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+          `;
+        }).join('');
+      }
+
+      function renderRefills(refills) {
+        return refills.map(refill => `
+          <article class="bubble-surface p-5 md:p-6 space-y-4 transition-all duration-300 hover:shadow-bubble-hover" data-animate>
+            <div class="space-y-4">
+              <div class="flex items-start gap-3">
+                <div class="w-8 h-8 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center flex-shrink-0">
+                  <span class="text-white text-sm font-bold">AR</span>
+                </div>
+                <div class="flex-1">
+                  <div class="text-sm">
+                    <span class="font-semibold text-neutral-100">${refill.refillAuthor}</span>
+                    <span class="text-neutral-500">${refill.refillHandle}</span>
+                    <span class="text-neutral-400"> refilled</span>
+                    <span class="font-semibold text-neutral-200">${refill.originalAuthor}</span>
+                  </div>
+                  <p class="text-xs text-neutral-500 mt-1">${refill.timestamp}</p>
+                </div>
+              </div>
+              
+              <div class="pl-11 border-l-2 border-neutral-700">
+                <div class="bg-neutral-900/60 rounded-bubble p-4 border border-neutral-800">
+                  <p class="text-neutral-400 text-sm mb-2">Original: "${refill.originalContent}"</p>
+                  <p class="text-neutral-300">${refill.refillContent}</p>
+                </div>
+                
+                <div class="flex items-center gap-3 mt-3">
+                  <button type="button" class="flex items-center gap-2 px-3 py-2 rounded-pill text-sm text-neutral-400 hover:text-neutral-100 hover:bg-neutral-900 transition">
+                    <span class="text-lg leading-none">👏</span>
+                    <span>${refill.claps.toLocaleString()}</span>
+                  </button>
+                  <button type="button" class="flex items-center gap-2 px-3 py-2 rounded-pill text-sm text-neutral-400 hover:text-neutral-100 hover:bg-neutral-900 transition">
+                    <span class="text-lg leading-none">💬</span>
+                    <span>Reply</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+        `).join('');
+      }
+
+      function renderMedia(media) {
+        return `
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            ${media.map(item => `
+              <article class="bubble-surface overflow-hidden group cursor-pointer transition-all duration-300 hover:shadow-bubble-hover" data-animate>
+                <div class="aspect-[4/3] overflow-hidden bg-neutral-900">
+                  <img src="${item.src}" alt="${item.alt}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                </div>
+                <div class="p-4">
+                  <h3 class="font-semibold text-neutral-100 mb-1">${item.title}</h3>
+                  <p class="text-xs text-neutral-500">${item.timestamp}</p>
+                </div>
+              </article>
+            `).join('')}
+          </div>
+        `;
+      }
+    });
+  </script>
 
   <!-- Layout & Animation Scripts -->
   <script src="./assets/js/layout.js"></script>

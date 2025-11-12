@@ -47,6 +47,10 @@
 
         <!-- Action Buttons -->
         <div class="flex items-center gap-2">
+          <button type="button" class="px-3 py-2 md:px-4 md:py-2 bg-neutral-800 hover:bg-neutral-700 text-neutral-200 rounded-pill text-sm transition-colors duration-200 flex items-center gap-1.5" data-action="toggle-theme" aria-label="Toggle theme">
+            <span data-theme-icon>🌙</span>
+            <span class="hidden md:inline" data-theme-label>Dark</span>
+          </button>
           <button class="px-3 py-2 md:px-4 md:py-2 bg-neutral-800 hover:bg-neutral-700 text-neutral-200 rounded-pill text-sm transition-colors duration-200">
             Settings
           </button>
@@ -525,5 +529,6 @@
 
   <!-- Layout & Animation Scripts -->
   <script src="./assets/js/layout.js"></script>
+  <script src="./assets/js/app.js"></script>
 </body>
 </html>

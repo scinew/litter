@@ -84,6 +84,19 @@ html {
   animation: fadeIn 0.4s ease-out;
 }
 
+.fade-out {
+  animation: fadeOut 0.2s ease-out;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
 .slide-in-left {
   animation: slideInLeft 0.4s ease-out;
 }
@@ -135,6 +148,16 @@ button:focus {
 
 ::-webkit-scrollbar-thumb:hover {
   @apply bg-neutral-600;
+}
+
+/* Hide scrollbar utility */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }
 
 /* Responsive container adjustments */
